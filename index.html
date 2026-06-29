@@ -42,13 +42,14 @@
           </div>
         </div>
 
-        <div class="hero-card">
-          <h3>Tu próxima sesión, en un solo paso</h3>
-          <ul>
-            <li>Clases para quienes empiezan</li>
-            <li>Entrenamientos para progresar</li>
-            <li>Asesoría para reservar plaza fácilmente</li>
-          </ul>
+        <div class="hero-card hero-card-enhanced">
+          <div class="hero-card-badge">Tu próxima sesión</div>
+          <h3>En un solo paso</h3>
+          <div class="hero-card-points">
+            <div>✅ Clases para quienes empiezan</div>
+            <div>✅ Entrenamientos para progresar</div>
+            <div>✅ Asesoría para reservar plaza fácilmente</div>
+          </div>
           <p class="card-note">Sin complicaciones y con un trato cercano.</p>
         </div>
       </section>
@@ -126,9 +127,9 @@
               Las sesiones se desarrollan en la pista de voley playa del Polideportivo El Terç, con un entorno cómodo y fácil de localizar.
             </p>
             <div class="location-points">
-              <div>📍 Polideportivo El Terç, Alaquàs</div>
-              <div>🏐 Pista de vóley playa</div>
-              <div>☀️ Ideal para entrenar y pasar un rato activo</div>
+              <div class="location-pill">📍 Polideportivo El Terç, Alaquàs</div>
+              <div class="location-pill">🏐 Pista de vóley playa</div>
+              <div class="location-pill">☀️ Ideal para entrenar y pasar un rato activo</div>
             </div>
           </div>
           <div class="map-card">
@@ -246,11 +247,11 @@
             <h3>Solicitud de inscripción</h3>
             <label>
               Nombre completo
-              <input type="text" name="nombre" placeholder="Escribe aquí" required />
+              <input type="text" name="nombre" placeholder="Ejemplo: Marta Pérez" required />
             </label>
             <label>
               Edad
-              <input type="number" name="edad" min="8" max="99" placeholder="Escribe aquí" required />
+              <input type="number" name="edad" min="8" max="99" placeholder="Ejemplo: 16" required />
             </label>
             <label>
               Nivel
@@ -263,19 +264,19 @@
             </label>
             <label>
               Teléfono
-              <input type="tel" name="telefono" placeholder="Escribe aquí" required />
+              <input type="tel" name="telefono" placeholder="Ejemplo: 600 123 456" required />
             </label>
             <label>
               Correo electrónico
-              <input type="email" name="email" placeholder="Escribe aquí" required />
+              <input type="email" name="email" placeholder="Ejemplo: tuemail@gmail.com" required />
             </label>
             <label>
               Disponibilidad
-              <input type="text" name="disponibilidad" placeholder="Escribe aquí" />
+              <input type="text" name="disponibilidad" placeholder="Ejemplo: tardes o fines de semana" />
             </label>
             <label>
               Comentarios
-              <textarea name="comentarios" rows="4" placeholder="Escribe aquí"></textarea>
+              <textarea name="comentarios" rows="4" placeholder="Ejemplo: Me interesa empezar este otoño"></textarea>
             </label>
             <button class="btn btn-primary full-width" type="submit">Enviar solicitud</button>
             <p id="form-message" class="form-message" role="status" aria-live="polite"></p>

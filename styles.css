@@ -213,14 +213,36 @@ a {
   backdrop-filter: blur(8px);
 }
 
-.hero-card h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
+.hero-card-enhanced {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%);
+  border: 1px solid rgba(19, 99, 223, 0.14);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-.hero-card ul {
-  padding-left: 1rem;
-  margin: 0 0 0.8rem;
+.hero-card-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  background: rgba(19, 99, 223, 0.1);
+  color: var(--primary-dark);
+  border-radius: 999px;
+  padding: 0.3rem 0.65rem;
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hero-card h3 {
+  margin: 0;
+}
+
+.hero-card-points {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-weight: 600;
 }
 
 .card-note {
@@ -295,6 +317,19 @@ a {
   gap: 0.75rem;
   margin-top: 1rem;
   color: var(--muted);
+}
+
+.location-pill {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  min-width: 220px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(19, 99, 223, 0.08);
+  border: 1px solid rgba(19, 99, 223, 0.12);
+  font-weight: 600;
 }
 
 .map-card {
@@ -574,6 +609,10 @@ textarea {
   .card,
   .benefit-card {
     text-align: center;
+  }
+
+  .location-pill {
+    margin: 0 auto;
   }
 
   .hero-actions,
