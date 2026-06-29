@@ -32,6 +32,10 @@
             <a class="btn btn-primary" href="#inscripciones">Quiero inscribirme</a>
             <a class="btn btn-secondary" href="#contacto">Hablar con nosotros</a>
           </div>
+          <div class="contact-actions">
+            <a class="btn btn-outline" href="mailto:voleyplayaalaquas@gmail.com">Escribir por correo</a>
+            <a class="btn btn-outline" href="https://www.instagram.com/voleyplayaalaquas/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
           <div class="hero-meta">
             <span>📍 Polideportivo El Terç, Alaquàs</span>
             <span>🏐 Pista exterior y ambiente activo</span>
@@ -147,11 +151,43 @@
         <div class="info-grid">
           <article class="info-card">
             <h3>Disponibilidad de grupos</h3>
-            <ul class="info-list">
-              <li><strong>Edad escolar:</strong> grupos de 16:30 a 17:45 h y de 17:45 a 19:00 h</li>
-              <li><strong>+18 años:</strong> grupos de 19:00 a 20:15 h y de 20:15 a 21:30 h</li>
-              <li><strong>Días:</strong> lunes y miércoles, martes y jueves, y viernes</li>
-            </ul>
+            <p>Abierto desde 8 hasta 99 años.</p>
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Grupo</th>
+                  <th>Días</th>
+                  <th>Horario</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Edad escolar</td>
+                  <td>Lunes y miércoles</td>
+                  <td>16:30–17:45 h</td>
+                </tr>
+                <tr>
+                  <td>Edad escolar</td>
+                  <td>Martes y jueves</td>
+                  <td>16:30–17:45 h</td>
+                </tr>
+                <tr>
+                  <td>+18 años</td>
+                  <td>Lunes y miércoles</td>
+                  <td>19:00–20:15 h</td>
+                </tr>
+                <tr>
+                  <td>+18 años</td>
+                  <td>Martes y jueves</td>
+                  <td>19:00–20:15 h</td>
+                </tr>
+                <tr>
+                  <td>Viernes</td>
+                  <td>Viernes</td>
+                  <td>16:30–19:00 h / 19:00–21:30 h</td>
+                </tr>
+              </tbody>
+            </table>
           </article>
           <article class="info-card">
             <h3>Precios y clases</h3>
@@ -210,11 +246,11 @@
             <h3>Solicitud de inscripción</h3>
             <label>
               Nombre completo
-              <input type="text" name="nombre" required />
+              <input type="text" name="nombre" placeholder="Escribe aquí" required />
             </label>
             <label>
               Edad
-              <input type="number" name="edad" min="5" max="100" required />
+              <input type="number" name="edad" min="8" max="99" placeholder="Escribe aquí" required />
             </label>
             <label>
               Nivel
@@ -227,19 +263,19 @@
             </label>
             <label>
               Teléfono
-              <input type="tel" name="telefono" required />
+              <input type="tel" name="telefono" placeholder="Escribe aquí" required />
             </label>
             <label>
               Correo electrónico
-              <input type="email" name="email" required />
+              <input type="email" name="email" placeholder="Escribe aquí" required />
             </label>
             <label>
               Disponibilidad
-              <input type="text" name="disponibilidad" placeholder="Ej. tardes, fines de semana" />
+              <input type="text" name="disponibilidad" placeholder="Escribe aquí" />
             </label>
             <label>
               Comentarios
-              <textarea name="comentarios" rows="4" placeholder="Cuéntanos algo más sobre ti o tus preferencias"></textarea>
+              <textarea name="comentarios" rows="4" placeholder="Escribe aquí"></textarea>
             </label>
             <button class="btn btn-primary full-width" type="submit">Enviar solicitud</button>
             <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
@@ -256,9 +292,11 @@
           <p>Correo: voleyplayaalaquas@gmail.com</p>
           <p>Ubicación: Polideportivo El Terç, Alaquàs</p>
         </div>
-        <div>
+        <div class="footer-actions">
           <h3>¿Prefieres llamarnos?</h3>
           <a class="btn btn-secondary" href="tel:618751870">Llamar ahora</a>
+          <a class="btn btn-secondary" href="mailto:voleyplayaalaquas@gmail.com">Enviar correo</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/voleyplayaalaquas/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </div>
     </footer>

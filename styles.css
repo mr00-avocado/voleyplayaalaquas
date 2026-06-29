@@ -135,11 +135,16 @@ a {
   margin: 0;
 }
 
-.hero-actions {
+.hero-actions,
+.contact-actions {
   display: flex;
   gap: 0.95rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
+}
+
+.contact-actions {
+  margin-top: 0.8rem;
 }
 
 .btn {
@@ -167,6 +172,12 @@ a {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.25);
   color: white;
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--primary-dark);
+  border-color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-meta {
@@ -335,6 +346,27 @@ a {
   gap: 0.45rem;
 }
 
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 0.6rem 0.55rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.schedule-table th {
+  color: var(--primary-dark);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 .info-card p {
   margin: 0.35rem 0;
   color: var(--muted);
@@ -480,6 +512,13 @@ textarea {
   z-index: 1;
 }
 
+.footer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
 .footer h3 {
   margin-top: 0;
   margin-bottom: 0.6rem;
@@ -537,7 +576,8 @@ textarea {
     text-align: center;
   }
 
-  .hero-actions {
+  .hero-actions,
+  .contact-actions {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -547,6 +587,10 @@ textarea {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .footer-actions {
+    align-items: center;
   }
 
   .hero-card {

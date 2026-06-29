@@ -19,7 +19,7 @@ if (form) {
       `Comentarios: ${data.comentarios || '-'}`,
     ].join('\n');
 
-    const mailtoLink = `mailto:[correo]?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:voleyplayaalaquas@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
 
     message.textContent = 'Tu solicitud se ha preparado para enviarse. Si no se abre tu correo, escríbenos al 618 75 18 70.';
