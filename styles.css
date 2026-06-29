@@ -112,6 +112,13 @@ a {
   flex: 1;
 }
 
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.24em;
@@ -136,11 +143,13 @@ a {
 }
 
 .hero-actions,
-.contact-actions {
+.contact-actions,
+.hero-meta {
   display: flex;
   gap: 0.95rem;
   flex-wrap: wrap;
   margin-top: 1.5rem;
+  justify-content: center;
 }
 
 .contact-actions {
@@ -181,9 +190,7 @@ a {
 }
 
 .hero-meta {
-  display: flex;
   gap: 0.75rem;
-  flex-wrap: wrap;
   margin-top: 1.3rem;
 }
 
