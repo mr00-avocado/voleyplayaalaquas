@@ -21,8 +21,17 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
   line-height: 1.6;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(15, 111, 255, 0.08), transparent 28%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 img {
@@ -43,6 +52,16 @@ a {
   background: linear-gradient(135deg, #0f6fff 0%, #0a3f7f 100%);
   color: white;
   padding-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.10) 100%);
+  pointer-events: none;
 }
 
 .nav {
@@ -50,25 +69,30 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 0;
+  position: relative;
+  z-index: 1;
 }
 
 .brand {
   font-weight: 800;
   font-size: 1.1rem;
+  letter-spacing: 0.02em;
 }
 
 .nav-links {
   display: flex;
-  gap: 1rem;
-  color: rgba(255, 255, 255, 0.9);
+  gap: 1.1rem;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 2rem;
   align-items: center;
   padding: 3rem 0 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
@@ -77,18 +101,19 @@ a {
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--accent);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .hero h1 {
   font-size: clamp(2rem, 4vw, 3.3rem);
   line-height: 1.1;
   margin: 0 0 1rem;
+  max-width: 700px;
 }
 
 .lead {
   font-size: 1.04rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
   max-width: 650px;
 }
 
@@ -104,7 +129,7 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 999px;
-  padding: 0.85rem 1.2rem;
+  padding: 0.9rem 1.25rem;
   font-weight: 700;
   border: 1px solid transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -117,12 +142,12 @@ a {
 .btn-primary {
   background: var(--accent);
   color: #123;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
 }
 
 .btn-secondary {
-  background: transparent;
-  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.3);
   color: white;
 }
 
@@ -131,12 +156,13 @@ a {
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 1.2rem;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .hero-card,
 .form-card,
-.card {
+.card,
+.step {
   background: var(--surface);
   color: var(--text);
   border: 1px solid var(--border);
@@ -158,7 +184,7 @@ a {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 4.2rem 0;
 }
 
 .alt-section {
@@ -166,12 +192,17 @@ a {
 }
 
 .section-heading {
-  margin-bottom: 2rem;
+  margin-bottom: 1.7rem;
 }
 
 .section h2 {
   margin: 0;
   font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+}
+
+.intro-text {
+  color: var(--muted);
+  max-width: 620px;
 }
 
 .cards-grid {
@@ -198,9 +229,6 @@ a {
 }
 
 .step {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 16px;
   padding: 1rem 1.1rem;
 }
 
