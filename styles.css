@@ -308,6 +308,43 @@ a {
   gap: 1rem;
 }
 
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.info-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.3rem;
+  box-shadow: var(--shadow);
+}
+
+.info-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+}
+
+.info-list {
+  padding-left: 1rem;
+  margin: 0;
+  color: var(--muted);
+  display: grid;
+  gap: 0.45rem;
+}
+
+.info-card p {
+  margin: 0.35rem 0;
+  color: var(--muted);
+}
+
+.info-card a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
 .card {
   padding: 1.35rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -462,7 +499,8 @@ textarea {
 
   .highlight-grid,
   .cards-grid,
-  .benefits-grid {
+  .benefits-grid,
+  .info-grid {
     grid-template-columns: 1fr;
   }
 
