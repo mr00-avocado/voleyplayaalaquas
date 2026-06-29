@@ -211,19 +211,22 @@ a {
 .hero-card {
   padding: 1.5rem;
   backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero-card-enhanced {
   background: linear-gradient(135deg, #ffffff 0%, #f5f9ff 100%);
   border: 1px solid rgba(19, 99, 223, 0.14);
-  display: flex;
-  flex-direction: column;
   gap: 0.8rem;
 }
 
 .hero-card-badge {
   display: inline-flex;
-  align-self: flex-start;
+  align-self: center;
   background: rgba(19, 99, 223, 0.1);
   color: var(--primary-dark);
   border-radius: 999px;
@@ -243,6 +246,13 @@ a {
   gap: 0.5rem;
   color: var(--muted);
   font-weight: 600;
+  width: 100%;
+}
+
+.hero-card-point {
+  padding: 0.55rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(19, 99, 223, 0.06);
 }
 
 .card-note {
@@ -312,11 +322,21 @@ a {
   align-items: start;
 }
 
+.location-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .location-points {
   display: grid;
   gap: 0.75rem;
   margin-top: 1rem;
   color: var(--muted);
+  justify-items: center;
+  width: 100%;
 }
 
 .location-pill {

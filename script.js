@@ -21,8 +21,9 @@ if (form) {
 
     const mailtoLink = `mailto:voleyplayaalaquas@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
+    window.open(mailtoLink, '_blank');
 
-    message.textContent = 'Tu solicitud se ha preparado para enviarse. Si no se abre tu correo, escríbenos al 618 75 18 70.';
+    message.textContent = 'Tu solicitud se está preparando para enviarse a nuestro correo de contacto. Si no se abre, escríbenos al 618 75 18 70.';
     form.reset();
   });
 }
