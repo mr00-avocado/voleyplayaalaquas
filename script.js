@@ -27,3 +27,67 @@ if (form) {
     form.reset();
   });
 }
+
+const galleryGrid = document.getElementById('gallery-grid');
+const galleryManifest = 'images/gallery.json';
+
+function createGalleryCard(item) {
+  const card = document.createElement('article');
+  card.className = 'gallery-card';
+
+  const media = document.createElement('div');
+  media.className = 'gallery-media';
+
+  if (item.type === 'video') {
+    const video = document.createElement('video');
+    video.src = item.src;
+    video.controls = true;
+    if (item.poster) {
+      video.poster = item.poster;
+    }
+    video.setAttribute('aria-label', item.alt || 'Vídeo de la galería');
+    media.appendChild(video);
+  } else {
+    const image = document.createElement('img');
+    image.src = item.src;
+    image.alt = item.alt || 'Imagen de la galería';
+    media.appendChild(image);
+  }
+
+  const caption = document.createElement('p');
+  caption.className = 'gallery-caption';
+  caption.textContent = item.alt || '';
+
+  card.appendChild(media);
+  card.appendChild(caption);
+  return card;
+}
+
+async function loadGallery() {
+  if (!galleryGrid) return;
+
+  try {
+    const response = await fetch(galleryManifest);
+    if (!response.ok) {
+      throw new Error('No se encontró el manifiesto de la galería.');
+    }
+
+    const items = await response.json();
+    if (!Array.isArray(items) || items.length === 0) {
+      throw new Error('No hay elementos en la galería.');
+    }
+
+    galleryGrid.innerHTML = '';
+    items.forEach((item) => {
+      galleryGrid.appendChild(createGalleryCard(item));
+    });
+  } catch (error) {
+    galleryGrid.innerHTML = `
+      <div class="gallery-empty">
+        La galería se llenará cuando añadas tus fotos o vídeos a <code>images/</code> y completes <code>images/gallery.json</code>.
+      </div>
+    `;
+  }
+}
+
+loadGallery();
