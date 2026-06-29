@@ -244,6 +244,25 @@ a {
   padding: 1.3rem;
 }
 
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.benefit-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f6faff 100%);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.3rem;
+  box-shadow: 0 12px 30px rgba(21, 48, 77, 0.06);
+}
+
+.benefit-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+}
+
 .two-columns {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
@@ -317,6 +336,7 @@ textarea {
   .hero-content,
   .two-columns,
   .cards-grid,
+  .benefits-grid,
   .location-grid {
     grid-template-columns: 1fr;
   }
