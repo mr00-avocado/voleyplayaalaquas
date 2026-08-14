@@ -260,41 +260,134 @@
           </div>
 
           <form id="inscription-form" class="form-card">
-            <h3>Solicitud de inscripción</h3>
-            <label>
-              Nombre completo
-              <input type="text" name="nombre" placeholder="Ejemplo: Marta Pérez" required />
-            </label>
-            <label>
-              Edad
-              <input type="number" name="edad" min="8" max="99" placeholder="Ejemplo: 16" required />
-            </label>
-            <label>
-              Nivel
-              <select name="nivel" required>
-                <option value="">Selecciona una opción</option>
-                <option value="Principiante">Principiante</option>
-                <option value="Intermedio">Intermedio</option>
-                <option value="Avanzado">Avanzado</option>
-              </select>
-            </label>
-            <label>
-              Teléfono
-              <input type="tel" name="telefono" placeholder="Ejemplo: 600 123 456" required />
-            </label>
-            <label>
-              Correo electrónico
-              <input type="email" name="email" placeholder="Ejemplo: tuemail@gmail.com" required />
-            </label>
-            <label>
-              Disponibilidad
-              <input type="text" name="disponibilidad" placeholder="Ejemplo: tardes o fines de semana" />
-            </label>
-            <label>
-              Comentarios
-              <textarea name="comentarios" rows="4" placeholder="Ejemplo: Me interesa empezar este otoño"></textarea>
-            </label>
-            <button class="btn btn-primary full-width" type="submit">Enviar solicitud</button>
+            <h3>Formulario de inscripción</h3>
+            
+            <!-- Sección A: Datos personales -->
+            <fieldset class="form-section">
+              <legend>A. DATOS PERSONALES</legend>
+              
+              <div class="form-row">
+                <label>
+                  Nombre
+                  <input type="text" name="nombre" placeholder="Ejemplo: Marta" required />
+                </label>
+                <label>
+                  Apellidos
+                  <input type="text" name="apellidos" placeholder="Ejemplo: Pérez García" required />
+                </label>
+              </div>
+
+              <label>
+                Fecha de nacimiento
+                <input type="date" name="fecha_nacimiento" required />
+              </label>
+
+              <label>
+                Padre / Madre / Tutor/a
+                <input type="text" name="tutor" placeholder="Nombre del responsable legal" required />
+              </label>
+
+              <div class="form-row">
+                <label>
+                  Teléfono 1
+                  <input type="tel" name="telefono1" placeholder="Ejemplo: 600 123 456" required />
+                </label>
+                <label>
+                  Teléfono 2
+                  <input type="tel" name="telefono2" placeholder="Opcional" />
+                </label>
+              </div>
+
+              <label>
+                Dirección
+                <input type="text" name="direccion" placeholder="Calle, número..." required />
+              </label>
+
+              <div class="form-row">
+                <label>
+                  Municipio
+                  <input type="text" name="municipio" placeholder="Alaquàs" required />
+                </label>
+                <label>
+                  Código postal
+                  <input type="text" name="codigo_postal" placeholder="46220" required />
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Sección B: Inscripción -->
+            <fieldset class="form-section">
+              <legend>B. INSCRIPCIÓN</legend>
+
+              <label>
+                Nivel
+                <select name="nivel" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="Iniciación o">Iniciación o</option>
+                  <option value="Iniciación +">Iniciación +</option>
+                  <option value="Intermedio">Intermedio</option>
+                  <option value="Avanzado">Avanzado</option>
+                </select>
+              </label>
+
+              <fieldset class="form-subgroup">
+                <legend class="form-sublegend">Formas de pago</legend>
+                <div class="radio-group">
+                  <label>
+                    <input type="radio" name="forma_pago" value="Pago único" required />
+                    Pago único
+                  </label>
+                  <label>
+                    <input type="radio" name="forma_pago" value="Pago fraccionado" required />
+                    Pago fraccionado
+                  </label>
+                </div>
+              </fieldset>
+
+              <label>
+                Talla camiseta
+                <select name="talla_camiseta" required>
+                  <option value="">Selecciona una talla</option>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+                </select>
+              </label>
+            </fieldset>
+
+            <!-- Sección C: Autorizaciones -->
+            <fieldset class="form-section">
+              <legend>C. AUTORIZACIONES</legend>
+              
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" name="autoriza_rgpd" required />
+                  Acepto la política de protección de datos del club (RGPD)
+                </label>
+                <label>
+                  <input type="checkbox" name="autoriza_comunicaciones" />
+                  Autorizo comunicaciones por teléfono y por WhatsApp
+                </label>
+                <label>
+                  <input type="checkbox" name="autoriza_imagenes" />
+                  Autorizo el uso de imágenes en redes sociales, prensa y medios
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Sección D: Observaciones -->
+            <fieldset class="form-section">
+              <legend>D. OBSERVACIONES</legend>
+              
+              <label>
+                <textarea name="observaciones" rows="4" placeholder="Añade aquí cualquier información relevante para tu inscripción..."></textarea>
+              </label>
+            </fieldset>
+
+            <button class="btn btn-primary full-width" type="submit">Enviar inscripción</button>
             <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
           </form>
         </div>

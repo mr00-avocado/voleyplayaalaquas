@@ -8,22 +8,54 @@ if (form) {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    const subject = `Solicitud de inscripción - ${data.nombre || 'Sin nombre'}`;
-    const body = [
+    // Compilar datos para el email
+    const datosPersonales = [
       `Nombre: ${data.nombre || '-'}`,
-      `Edad: ${data.edad || '-'}`,
+      `Apellidos: ${data.apellidos || '-'}`,
+      `Fecha de nacimiento: ${data.fecha_nacimiento || '-'}`,
+      `Padre/Madre/Tutor/a: ${data.tutor || '-'}`,
+      `Teléfono 1: ${data.telefono1 || '-'}`,
+      `Teléfono 2: ${data.telefono2 || '-'}`,
+      `Dirección: ${data.direccion || '-'}`,
+      `Municipio: ${data.municipio || '-'}`,
+      `Código postal: ${data.codigo_postal || '-'}`,
+    ].join('\n');
+
+    const datosInscripcion = [
       `Nivel: ${data.nivel || '-'}`,
-      `Teléfono: ${data.telefono || '-'}`,
-      `Correo electrónico: ${data.email || '-'}`,
-      `Disponibilidad: ${data.disponibilidad || '-'}`,
-      `Comentarios: ${data.comentarios || '-'}`,
+      `Forma de pago: ${data.forma_pago || '-'}`,
+      `Talla camiseta: ${data.talla_camiseta || '-'}`,
+    ].join('\n');
+
+    const autorizaciones = [
+      `RGPD: ${data.autoriza_rgpd ? 'Sí' : 'No'}`,
+      `Comunicaciones (teléfono/WhatsApp): ${data.autoriza_comunicaciones ? 'Sí' : 'No'}`,
+      `Uso de imágenes: ${data.autoriza_imagenes ? 'Sí' : 'No'}`,
+    ].join('\n');
+
+    const subject = `Inscripción - ${data.nombre || 'Sin nombre'} ${data.apellidos || ''}`;
+    const body = [
+      'FORMULARIO DE INSCRIPCIÓN',
+      '=========================',
+      '',
+      'A. DATOS PERSONALES',
+      datosPersonales,
+      '',
+      'B. INSCRIPCIÓN',
+      datosInscripcion,
+      '',
+      'C. AUTORIZACIONES',
+      autorizaciones,
+      '',
+      'D. OBSERVACIONES',
+      data.observaciones || '(Sin observaciones)',
     ].join('\n');
 
     const mailtoLink = `mailto:voleyplayaalaquas@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
     window.open(mailtoLink, '_blank');
 
-    message.textContent = 'Tu solicitud se está preparando para enviarse a nuestro correo de contacto. Si no se abre, escríbenos al 618 75 18 70.';
+    message.textContent = '✓ Formulario preparado. Si no se abre el correo, escríbenos a voleyplayaalaquas@gmail.com o llama al 618 75 18 70.';
     form.reset();
   });
 }
