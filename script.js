@@ -61,7 +61,7 @@ if (form) {
 }
 
 const galleryGrid = document.getElementById('gallery-grid');
-const galleryManifest = 'images/gallery.json';
+const galleryManifest = 'images/gallery.json?t=' + Date.now();
 
 function createGalleryCard(item) {
   const card = document.createElement('article');
