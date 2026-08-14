@@ -456,6 +456,7 @@ a {
   padding: 1rem;
   color: var(--text);
   font-weight: 600;
+  display: none;
 }
 
 .gallery-empty {
