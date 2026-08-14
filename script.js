@@ -86,7 +86,12 @@ function createGalleryCard(item) {
     media.appendChild(image);
   }
 
+  const caption = document.createElement('p');
+  caption.className = 'gallery-caption';
+  caption.textContent = item.alt || '';
+
   card.appendChild(media);
+  card.appendChild(caption);
   return card;
 }
 
