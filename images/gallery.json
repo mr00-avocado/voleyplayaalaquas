@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "type": "image",
+    "src": "images/IMG-20260629-WA0016.jpg",
+    "alt": "Momento de la escuela de vóley playa"
+  },
+  {
+    "type": "image",
+    "src": "images/IMG-20260629-WA0017.jpg",
+    "alt": "Sesión de entrenamiento"
+  },
+  {
+    "type": "image",
+    "src": "images/IMG-20260629-WA0018.jpg",
+    "alt": "Entrenamiento en equipo"
+  },
+  {
+    "type": "image",
+    "src": "images/IMG-20260629-WA0020.jpg",
+    "alt": "Actividad en la pista de vóley"
+  },
+  {
+    "type": "image",
+    "src": "images/IMG-20260629-WA0021.jpg",
+    "alt": "Momento de diversión en el entrenamiento"
+  },
+  {
+    "type": "image",
+    "src": "images/IMG-20260629-WA0023.jpg",
+    "alt": "Grupo de alumnos"
+  },
+  {
+    "type": "image",
+    "src": "images/motion_photo_3807421155869200777.jpg",
+    "alt": "Acción de vóley playa"
+  }
+]
