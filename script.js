@@ -72,16 +72,16 @@ function createGalleryCard(item) {
 
   if (item.type === 'video') {
     const video = document.createElement('video');
-    video.src = item.src;
+    video.src = 'images/' + item.src;
     video.controls = true;
     if (item.poster) {
-      video.poster = item.poster;
+      video.poster = 'images/' + item.poster;
     }
     video.setAttribute('aria-label', item.alt || 'Vídeo de la galería');
     media.appendChild(video);
   } else {
     const image = document.createElement('img');
-    image.src = item.src;
+    image.src = 'images/' + item.src;
     image.alt = item.alt || 'Imagen de la galería';
     media.appendChild(image);
   }
