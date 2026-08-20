@@ -1,14 +1,37 @@
 const form = document.getElementById('inscription-form');
 const message = document.getElementById('form-message');
+const googleSheetsEndpoint = '';
 
 if (form) {
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
     const grupos = Array.from(form.querySelectorAll('input[name="grupos"]:checked'))
       .map((input) => input.value);
+
+    const sheetData = {
+      ...data,
+      grupos: grupos.join(', '),
+      autoriza_rgpd: data.autoriza_rgpd ? 'Sí' : 'No',
+      autoriza_comunicaciones: data.autoriza_comunicaciones ? 'Sí' : 'No',
+      autoriza_imagenes: data.autoriza_imagenes ? 'Sí' : 'No',
+    };
+
+    if (googleSheetsEndpoint) {
+      try {
+        await fetch(googleSheetsEndpoint, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(sheetData),
+        });
+      } catch (error) {
+        message.textContent = 'No se pudo guardar la inscripción en la hoja. Inténtalo de nuevo.';
+        return;
+      }
+    }
 
     // Compilar datos para el email
     const datosPersonales = [
