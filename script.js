@@ -1,6 +1,6 @@
 const form = document.getElementById('inscription-form');
 const message = document.getElementById('form-message');
-const googleSheetsEndpoint = 'https://script.google.com/macros/s/AKfycbxbimsGZftZ1ce9U2ZLwP-NuZGZKrg7G3qwahmZTbO3mW423AIG3cCWsfDmFb5fBxGk/exec';
+const googleSheetsEndpoint = 'https://script.google.com/macros/s/AKfycbwP-lW1P9jBM9pBkSmNsvg0eZbaGBJXoysOgweSKG9ej7hR-HiO8BbIpB5OSj3mbkYl/exec';
 
 if (form) {
   form.addEventListener('submit', async (event) => {
