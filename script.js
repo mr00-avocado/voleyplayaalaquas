@@ -12,6 +12,7 @@ if (form) {
       .map((input) => input.value);
 
     const sheetData = {
+      fecha_hora: new Date().toLocaleString('es-ES'),
       ...data,
       grupos: grupos.join(', '),
       autoriza_rgpd: data.autoriza_rgpd ? 'Sí' : 'No',

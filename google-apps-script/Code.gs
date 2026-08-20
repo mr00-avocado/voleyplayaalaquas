@@ -11,7 +11,7 @@ function doPost(e) {
     var data = JSON.parse(e.postData.contents);
 
     sheet.appendRow([
-      new Date(),
+      data.fecha_hora || new Date(),
       data.nombre || '',
       data.apellidos || '',
       data.fecha_nacimiento || '',
