@@ -1,6 +1,6 @@
 const form = document.getElementById('inscription-form');
 const message = document.getElementById('form-message');
-const googleSheetsEndpoint = 'https://script.google.com/macros/s/AKfycbwtWf4yiSLK9yWf9xzpuwq4FpBz6bTL5cEiGnGI0oL1TeIzroN516muQKTmBim5a76A/exec';
+const googleSheetsEndpoint = 'https://script.google.com/macros/s/AKfycbxbimsGZftZ1ce9U2ZLwP-NuZGZKrg7G3qwahmZTbO3mW423AIG3cCWsfDmFb5fBxGk/exec';
 
 if (form) {
   form.addEventListener('submit', async (event) => {
@@ -21,13 +21,15 @@ if (form) {
 
     if (googleSheetsEndpoint) {
       try {
-        await fetch(googleSheetsEndpoint, {
+        const response = await fetch(googleSheetsEndpoint, {
           method: 'POST',
           mode: 'no-cors',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(sheetData),
         });
+        console.log('Datos guardados en Google Sheets:', response);
       } catch (error) {
+        console.error('Error al guardar en Google Sheets:', error);
         message.textContent = 'No se pudo guardar la inscripción en la hoja. Inténtalo de nuevo.';
         return;
       }
