@@ -7,6 +7,7 @@ if (form) {
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
+    const grupos = formData.getAll('grupos');
 
     // Compilar datos para el email
     const datosPersonales = [
@@ -23,6 +24,7 @@ if (form) {
 
     const datosInscripcion = [
       `Nivel: ${data.nivel || '-'}`,
+      `Grupo o grupos preferidos: ${grupos.length ? grupos.join(', ') : '-'}`,
       `Forma de pago: ${data.forma_pago || '-'}`,
       `Talla camiseta: ${data.talla_camiseta || '-'}`,
     ].join('\n');
