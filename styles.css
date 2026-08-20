@@ -168,9 +168,37 @@ a {
 .contact-actions {
   margin-top: 0.8rem;
   justify-content: flex-start;
+  flex-wrap: nowrap;
   width: auto;
   margin-left: 0;
   margin-right: 0;
+}
+
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-icon-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon-btn img,
+.contact-link img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .btn {
@@ -206,25 +234,9 @@ a {
   border-color: rgba(255, 255, 255, 0.9);
 }
 
-.social-btn {
-  gap: 0.5rem;
-  min-width: 0;
-  padding: 0.7rem 0.9rem;
-  white-space: nowrap;
-}
-
-.social-btn i {
-  font-size: 1.05rem;
-}
-
-.social-btn span {
-  font-size: 0.82rem;
-}
-
 @media (max-width: 700px) {
   .contact-actions {
     justify-content: center;
-    flex-wrap: wrap;
   }
 }
 
@@ -755,6 +767,19 @@ textarea {
   gap: 0.7rem;
 }
 
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: white;
+  font-weight: 700;
+}
+
+.contact-link img {
+  width: 24px;
+  height: 24px;
+}
+
 .footer h3 {
   margin-top: 0;
   margin-bottom: 0.6rem;
@@ -824,7 +849,6 @@ textarea {
 
   .hero-actions,
   .contact-actions {
-    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
