@@ -33,6 +33,12 @@ if (form) {
     const grupos = Array.from(form.querySelectorAll('input[name="grupos"]:checked'))
       .map((input) => input.value);
 
+    // Validar que al menos un grupo esté seleccionado
+    if (grupos.length === 0) {
+      message.textContent = '⚠️ Por favor, selecciona al menos un grupo.';
+      return;
+    }
+
     const sheetData = {
       fecha_hora: obtenerFechaHoraActual(),
       ...data,
