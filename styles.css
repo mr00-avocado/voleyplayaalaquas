@@ -203,8 +203,15 @@ a {
 
 .social-icon-phone img,
 .social-icon-instagram img {
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icon-phone,
+.social-icon-instagram {
+  width: 48px;
+  height: 48px;
+  padding: 3px;
 }
 
 .btn {
