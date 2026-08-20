@@ -167,6 +167,10 @@ a {
 
 .contact-actions {
   margin-top: 0.8rem;
+  justify-content: flex-start;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .btn {
@@ -200,6 +204,28 @@ a {
   background: rgba(255, 255, 255, 0.92);
   color: var(--primary-dark);
   border-color: rgba(255, 255, 255, 0.9);
+}
+
+.social-btn {
+  gap: 0.5rem;
+  min-width: 0;
+  padding: 0.7rem 0.9rem;
+  white-space: nowrap;
+}
+
+.social-btn i {
+  font-size: 1.05rem;
+}
+
+.social-btn span {
+  font-size: 0.82rem;
+}
+
+@media (max-width: 700px) {
+  .contact-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .hero-meta {
