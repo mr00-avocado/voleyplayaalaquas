@@ -201,6 +201,12 @@ a {
   object-fit: contain;
 }
 
+.social-icon-phone img,
+.social-icon-instagram img {
+  width: 34px;
+  height: 34px;
+}
+
 .btn {
   display: inline-flex;
   justify-content: center;
