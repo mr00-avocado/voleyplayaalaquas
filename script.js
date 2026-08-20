@@ -7,7 +7,8 @@ if (form) {
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-    const grupos = formData.getAll('grupos');
+    const grupos = Array.from(form.querySelectorAll('input[name="grupos"]:checked'))
+      .map((input) => input.value);
 
     // Compilar datos para el email
     const datosPersonales = [
@@ -55,7 +56,6 @@ if (form) {
 
     const mailtoLink = `mailto:voleyplayaalaquas@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
-    window.open(mailtoLink, '_blank');
 
     message.textContent = '✓ Formulario preparado. Si no se abre el correo, escríbenos a voleyplayaalaquas@gmail.com o llama al 618 75 18 70.';
     form.reset();
