@@ -2,6 +2,28 @@ const form = document.getElementById('inscription-form');
 const message = document.getElementById('form-message');
 const googleSheetsEndpoint = 'https://script.google.com/macros/s/AKfycbwP-lW1P9jBM9pBkSmNsvg0eZbaGBJXoysOgweSKG9ej7hR-HiO8BbIpB5OSj3mbkYl/exec';
 
+// Función para convertir fecha a formato DD-MM-YYYY
+function formatearFecha(fecha) {
+  if (!fecha) return '';
+  const date = new Date(fecha + 'T00:00:00');
+  const dia = String(date.getDate()).padStart(2, '0');
+  const mes = String(date.getMonth() + 1).padStart(2, '0');
+  const ano = date.getFullYear();
+  return `${dia}-${mes}-${ano}`;
+}
+
+// Función para obtener fecha y hora actual en formato DD-MM-YYYY HH:MM:SS
+function obtenerFechaHoraActual() {
+  const ahora = new Date();
+  const dia = String(ahora.getDate()).padStart(2, '0');
+  const mes = String(ahora.getMonth() + 1).padStart(2, '0');
+  const ano = ahora.getFullYear();
+  const horas = String(ahora.getHours()).padStart(2, '0');
+  const minutos = String(ahora.getMinutes()).padStart(2, '0');
+  const segundos = String(ahora.getSeconds()).padStart(2, '0');
+  return `${dia}-${mes}-${ano} ${horas}:${minutos}:${segundos}`;
+}
+
 if (form) {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -12,8 +34,9 @@ if (form) {
       .map((input) => input.value);
 
     const sheetData = {
-      fecha_hora: new Date().toLocaleString('es-ES'),
+      fecha_hora: obtenerFechaHoraActual(),
       ...data,
+      fecha_nacimiento: formatearFecha(data.fecha_nacimiento),
       grupos: grupos.join(', '),
       autoriza_rgpd: data.autoriza_rgpd ? 'Sí' : 'No',
       autoriza_comunicaciones: data.autoriza_comunicaciones ? 'Sí' : 'No',
@@ -40,7 +63,7 @@ if (form) {
     const datosPersonales = [
       `Nombre: ${data.nombre || '-'}`,
       `Apellidos: ${data.apellidos || '-'}`,
-      `Fecha de nacimiento: ${data.fecha_nacimiento || '-'}`,
+      `Fecha de nacimiento: ${formatearFecha(data.fecha_nacimiento) || '-'}`,
       `Padre/Madre/Tutor/a: ${data.tutor || '-'}`,
       `Teléfono 1: ${data.telefono1 || '-'}`,
       `Teléfono 2: ${data.telefono2 || '-'}`,
@@ -66,6 +89,7 @@ if (form) {
     const body = [
       'FORMULARIO DE INSCRIPCIÓN',
       '=========================',
+      `Fecha de envío: ${obtenerFechaHoraActual()}`,
       '',
       'A. DATOS PERSONALES',
       datosPersonales,
