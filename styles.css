@@ -216,7 +216,7 @@ a {
   letter-spacing: 0.24em;
   font-size: 0.74rem;
   font-weight: 700;
-  color: #111111;
+  color: var(--burgundy);
   margin: 0 0 0.75rem;
 }
 
@@ -317,7 +317,7 @@ a {
 }
 
 .hero-actions {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .contact-actions {
@@ -493,7 +493,7 @@ a {
   padding: 0.55rem 0.7rem;
   border-radius: 999px;
   background: rgba(243, 199, 68, 0.1);
-  color: #b8860b;
+  color: var(--burgundy);
 }
 
 .card-note {
@@ -503,7 +503,7 @@ a {
 }
 
 .section {
-  padding: 2.5rem 0;
+  padding: 1.8rem 0;
 }
 
 .alt-section {
@@ -517,7 +517,7 @@ a {
 .section h2 {
   margin: 0;
   font-size: clamp(1.5rem, 2.3vw, 2.1rem);
-  color: var(--burgundy);
+  color: #111111;
 }
 
 .intro-text {
@@ -590,9 +590,10 @@ a {
   min-width: 220px;
   padding: 0.7rem 0.9rem;
   border-radius: 999px;
-  background: rgba(19, 99, 223, 0.08);
-  border: 1px solid rgba(19, 99, 223, 0.12);
+  background: rgba(243, 199, 68, 0.12);
+  border: 1px solid rgba(243, 199, 68, 0.2);
   font-weight: 600;
+  color: var(--burgundy);
 }
 
 .map-card {
