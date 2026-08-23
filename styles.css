@@ -222,17 +222,26 @@ a {
   letter-spacing: 0;
 }
 
+.club-title-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.25rem, 4vw, 3.5rem);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 .club-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  width: auto;
   text-transform: uppercase;
 }
 
 .club-title-line {
   display: block;
-  animation: title-slide-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: title-slide-in 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .club-title-club {
@@ -250,6 +259,14 @@ a {
   animation-delay: 0.46s;
 }
 
+.club-crest {
+  display: block;
+  width: clamp(110px, 16vw, 190px);
+  height: auto;
+  flex: 0 0 auto;
+  animation: crest-reveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.62s both;
+}
+
 @keyframes title-slide-in {
   from {
     opacity: 0;
@@ -258,6 +275,17 @@ a {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes crest-reveal {
+  from {
+    opacity: 0;
+    transform: translateX(45px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
   }
 }
 
@@ -981,6 +1009,10 @@ textarea {
     max-width: 100%;
   }
 
+  .club-title-lockup {
+    gap: 1rem;
+  }
+
   .hero-text,
   .hero-card,
   .location-grid > div,
@@ -1018,5 +1050,16 @@ textarea {
 
   .map-card {
     margin: 1.2rem 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .club-title-lockup {
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .club-crest {
+    width: 88px;
   }
 }
