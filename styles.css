@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 88px;
 }
 
 #inicio,
@@ -29,7 +29,7 @@ html {
 #ubicacion,
 #informacion,
 #contacto {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 88px;
 }
 
 body {
@@ -215,8 +215,8 @@ a {
   margin: 0 0 0.75rem;
 }
 
-.hero .eyebrow {
-  color: #fff;
+.hero-text .eyebrow {
+  color: #fff !important;
 }
 
 .hero h1 {
