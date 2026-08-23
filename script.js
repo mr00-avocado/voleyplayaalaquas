@@ -12,14 +12,28 @@ if (menuToggle && navMenu) {
     navMenu.classList.toggle('is-open', !isOpen);
   });
 
-  navMenu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
+}
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+
+    event.preventDefault();
+    const header = document.querySelector('.nav');
+    const offset = (header ? header.offsetHeight : 76) + 20;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({ top: targetTop, behavior: 'smooth' });
+    history.pushState(null, '', link.getAttribute('href'));
+
+    if (menuToggle && navMenu) {
       menuToggle.setAttribute('aria-expanded', 'false');
       menuToggle.setAttribute('aria-label', 'Abrir menú');
       navMenu.classList.remove('is-open');
-    });
+    }
   });
-}
+});
 
 // Función para convertir fecha a formato DD-MM-YYYY
 function formatearFecha(fecha) {
