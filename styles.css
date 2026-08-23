@@ -511,7 +511,7 @@ a {
 }
 
 .section-heading {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .section h2 {
@@ -531,13 +531,23 @@ a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-}}
+}
 
 .highlight-card {
-  padding: 1.8rem 1.8rem;
+  padding: 1.8rem 1.6rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(20, 35, 58, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(20, 35, 58, 0.12);
 }
 
 .highlight-card .tag {
@@ -545,7 +555,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 700;
-  color: #f3c744;
+  color: var(--burgundy);
 }
 
 .highlight-card strong {
