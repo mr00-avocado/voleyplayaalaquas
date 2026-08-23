@@ -1,6 +1,25 @@
 const form = document.getElementById('inscription-form');
 const message = document.getElementById('form-message');
 const googleSheetsEndpoint = 'https://script.google.com/macros/s/AKfycbwP-lW1P9jBM9pBkSmNsvg0eZbaGBJXoysOgweSKG9ej7hR-HiO8BbIpB5OSj3mbkYl/exec';
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.getElementById('main-menu');
+
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menú' : 'Cerrar menú');
+    navMenu.classList.toggle('is-open', !isOpen);
+  });
+
+  navMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menú');
+      navMenu.classList.remove('is-open');
+    });
+  });
+}
 
 // Función para convertir fecha a formato DD-MM-YYYY
 function formatearFecha(fecha) {

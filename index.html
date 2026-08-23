@@ -8,17 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=8" />
+    <link rel="stylesheet" href="styles.css?v=9" />
   </head>
   <body>
     <header class="hero">
-      <nav class="nav container">
+      <nav class="nav container" aria-label="Navegación principal">
         <a class="brand" href="#inicio">Club Voleibol Alaquàs</a>
-        <div class="nav-links">
-          <a href="#servicios">Qué hacemos</a>
+        <div class="nav-actions">
           <a href="#galeria">Galería</a>
           <a href="#inscripciones">Inscripciones</a>
-          <a href="#contacto">Contacto</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="nav-menu" id="main-menu">
+            <a href="#servicios">Qué hacemos</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#informacion">Información</a>
+            <a href="#contacto">Contacto</a>
+          </div>
         </div>
       </nav>
 
@@ -467,6 +476,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=10"></script>
+    <script src="script.js?v=11"></script>
   </body>
 </html>
