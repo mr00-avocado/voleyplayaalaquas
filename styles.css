@@ -214,15 +214,51 @@ a {
   margin: 0 0 0.75rem;
 }
 
-.hero-text .eyebrow {
-  color: var(--text) !important;
+.hero h1 {
+  font-size: clamp(2.2rem, 7vw, 6.8rem);
+  line-height: 0.9;
+  margin: 0 0 1rem;
+  max-width: 900px;
+  letter-spacing: 0;
 }
 
-.hero h1 {
-  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
-  line-height: 1.05;
-  margin: 0 0 1rem;
-  max-width: 720px;
+.club-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.club-title-line {
+  display: block;
+  animation: title-slide-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.club-title-club {
+  color: #111;
+  animation-delay: 0.1s;
+}
+
+.club-title-voleibol {
+  color: var(--burgundy);
+  animation-delay: 0.28s;
+}
+
+.club-title-alaquas {
+  color: var(--gold);
+  animation-delay: 0.46s;
+}
+
+@keyframes title-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(110px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .lead {
