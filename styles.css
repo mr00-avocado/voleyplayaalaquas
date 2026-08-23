@@ -468,7 +468,7 @@ a {
   display: inline-flex;
   align-self: center;
   background: rgba(243, 199, 68, 0.15);
-  color: #b8860b;
+  color: #111111;
   border-radius: 999px;
   padding: 0.3rem 0.65rem;
   font-weight: 700;
@@ -493,7 +493,7 @@ a {
   padding: 0.55rem 0.7rem;
   border-radius: 999px;
   background: rgba(243, 199, 68, 0.1);
-  color: var(--burgundy);
+  color: #111111;
 }
 
 .card-note {
@@ -524,13 +524,14 @@ a {
   color: var(--muted);
   max-width: 620px;
   margin-top: 0.6rem;
+  font-weight: 700;
 }
 
 .highlight-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
+  gap: 0.8rem;
+}}
 
 .highlight-card {
   padding: 1.2rem 1.3rem;
@@ -593,7 +594,7 @@ a {
   background: rgba(243, 199, 68, 0.12);
   border: 1px solid rgba(243, 199, 68, 0.2);
   font-weight: 600;
-  color: var(--burgundy);
+  color: #111111;
 }
 
 .map-card {
