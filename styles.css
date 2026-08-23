@@ -221,9 +221,9 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(2.2rem, 7vw, 6.8rem);
+  font-size: clamp(2.8rem, 9vw, 7.4rem);
   line-height: 0.9;
-  margin: 0 0 1rem;
+  margin: 1.5rem 0 1.5rem;
   max-width: 900px;
   letter-spacing: 0;
 }
@@ -511,7 +511,7 @@ a {
 }
 
 .section-heading {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
 }
 
 .section h2 {
@@ -534,10 +534,10 @@ a {
 }
 
 .highlight-card {
-  padding: 1.8rem 1.6rem;
+  padding: 2.2rem 1.8rem;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 1rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -561,11 +561,13 @@ a {
 .highlight-card strong {
   font-size: 1.1rem;
   font-weight: 700;
+  color: var(--burgundy);
 }
 
 .highlight-card p {
-  margin: 0;
+  margin: 0.5rem 0 0;
   color: var(--muted);
+  line-height: 1.5;
 }
 
 .location-grid,
