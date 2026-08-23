@@ -138,7 +138,7 @@ if (form) {
 }
 
 const galleryGrid = document.getElementById('gallery-grid');
-const galleryManifest = 'images/gallery.json?t=' + Date.now();
+const galleryManifest = 'images/gallery.json?cache=' + Math.random().toString(36).substr(2, 9);
 
 function createGalleryCard(item) {
   const card = document.createElement('article');
