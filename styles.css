@@ -21,6 +21,16 @@ html {
   scroll-behavior: smooth;
 }
 
+#inicio,
+#servicios,
+#galeria,
+#inscripciones,
+#ubicacion,
+#informacion,
+#contacto {
+  scroll-margin-top: 92px;
+}
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
