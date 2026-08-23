@@ -4,8 +4,8 @@
   --primary: #1363df;
   --primary-dark: #0c4da0;
   --accent: #ffcf4b;
-  --text: #14233a;
-  --muted: #5f6e85;
+  --text: #111111;
+  --muted: #111111;
   --border: #dfe8f5;
   --shadow: 0 18px 45px rgba(20, 35, 58, 0.08);
   --burgundy: #721c2b;
@@ -50,12 +50,12 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(247, 251, 255, 0.58), rgba(247, 251, 255, 0.58)),
+    linear-gradient(rgba(247, 251, 255, 0.48), rgba(247, 251, 255, 0.48)),
     url("images/background/sand-waves-seamless-pattern-texture-background-ai-generative-photo.jpg");
   background-repeat: repeat;
   background-size: auto, 350px 350px;
-  filter: grayscale(0.35) saturate(0.7);
-  opacity: 0.78;
+  filter: grayscale(0) saturate(1);
+  opacity: 0.8;
   pointer-events: none;
   z-index: -1;
 }
@@ -247,7 +247,7 @@ a {
 
 .club-title-line {
   display: block;
-  animation: title-slide-in 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: title-slide-in 3.2s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .club-title-club {
@@ -256,12 +256,12 @@ a {
 }
 
 .club-title-voleibol {
-  color: var(--burgundy);
+  color: #111111;
   animation-delay: 0.28s;
 }
 
 .club-title-alaquas {
-  color: var(--gold);
+  color: #b84f12;
   animation-delay: 0.46s;
 }
 
@@ -270,7 +270,7 @@ a {
   width: clamp(80px, 11vw, 125px);
   height: auto;
   flex: 0 0 auto;
-  animation: crest-reveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.62s both;
+  animation: crest-reveal 2.4s cubic-bezier(0.22, 1, 0.36, 1) 1.1s both;
 }
 
 @keyframes title-slide-in {
@@ -287,11 +287,11 @@ a {
 @keyframes crest-reveal {
   from {
     opacity: 0;
-    transform: translate(45px, -24px) scale(0.92);
+    transform: translate(45px, -8px) scale(0.92);
   }
   to {
     opacity: 1;
-    transform: translate(0, -24px) scale(1);
+    transform: translate(0, -8px) scale(1);
   }
 }
 
@@ -516,6 +516,7 @@ a {
 .section h2 {
   margin: 0;
   font-size: clamp(1.5rem, 2.3vw, 2.1rem);
+  color: var(--burgundy);
 }
 
 .intro-text {
