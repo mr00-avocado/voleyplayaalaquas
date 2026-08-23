@@ -1,8 +1,8 @@
 :root {
   --bg: #f4f8ff;
   --surface: #ffffff;
-  --primary: #1363df;
-  --primary-dark: #0c4da0;
+  --primary: #721c2b;
+  --primary-dark: #51121e;
   --accent: #ffcf4b;
   --text: #111111;
   --muted: #111111;
@@ -216,7 +216,7 @@ a {
   letter-spacing: 0.24em;
   font-size: 0.74rem;
   font-weight: 700;
-  color: var(--accent);
+  color: #111111;
   margin: 0 0 0.75rem;
 }
 
@@ -256,7 +256,7 @@ a {
 }
 
 .club-title-voleibol {
-  color: #111111;
+  color: var(--burgundy);
   animation-delay: 0.28s;
 }
 
@@ -502,7 +502,7 @@ a {
 }
 
 .section {
-  padding: 4.2rem 0;
+  padding: 2.5rem 0;
 }
 
 .alt-section {
