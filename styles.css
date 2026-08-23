@@ -49,7 +49,13 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(19, 99, 223, 0.08), transparent 28%);
+  background-image:
+    linear-gradient(rgba(247, 251, 255, 0.78), rgba(247, 251, 255, 0.78)),
+    url("images/background/sand-waves-seamless-pattern-texture-background-ai-generative-photo.jpg");
+  background-repeat: repeat;
+  background-size: auto, 350px 350px;
+  filter: grayscale(0.7) saturate(0.35);
+  opacity: 0.72;
   pointer-events: none;
   z-index: -1;
 }
@@ -261,7 +267,7 @@ a {
 
 .club-crest {
   display: block;
-  width: clamp(95px, 13vw, 155px);
+  width: clamp(80px, 11vw, 125px);
   height: auto;
   flex: 0 0 auto;
   animation: crest-reveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.62s both;
@@ -281,11 +287,11 @@ a {
 @keyframes crest-reveal {
   from {
     opacity: 0;
-    transform: translate(45px, -10px) scale(0.92);
+    transform: translate(45px, -24px) scale(0.92);
   }
   to {
     opacity: 1;
-    transform: translate(0, -10px) scale(1);
+    transform: translate(0, -24px) scale(1);
   }
 }
 
@@ -1060,6 +1066,6 @@ textarea {
   }
 
   .club-crest {
-    width: 76px;
+    width: 68px;
   }
 }
