@@ -247,7 +247,7 @@ a {
 
 .club-title-line {
   display: block;
-  animation: title-slide-in 3.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: title-slide-in 4.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .club-title-club {
@@ -467,8 +467,8 @@ a {
 .hero-card-badge {
   display: inline-flex;
   align-self: center;
-  background: rgba(19, 99, 223, 0.1);
-  color: var(--primary-dark);
+  background: rgba(243, 199, 68, 0.15);
+  color: #b8860b;
   border-radius: 999px;
   padding: 0.3rem 0.65rem;
   font-weight: 700;
@@ -492,7 +492,8 @@ a {
 .hero-card-point {
   padding: 0.55rem 0.7rem;
   border-radius: 999px;
-  background: rgba(19, 99, 223, 0.06);
+  background: rgba(243, 199, 68, 0.1);
+  color: #b8860b;
 }
 
 .card-note {
