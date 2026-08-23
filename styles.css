@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 100px;
 }
 
 #inicio,
@@ -29,7 +29,7 @@ html {
 #ubicacion,
 #informacion,
 #contacto {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 100px;
 }
 
 body {
@@ -69,8 +69,8 @@ a {
 }
 
 .hero {
-  background: linear-gradient(135deg, #0f6fff 0%, #0a3f7f 100%);
-  color: white;
+  background: var(--surface);
+  color: var(--text);
   padding-bottom: 4rem;
   position: relative;
   overflow: hidden;
@@ -83,8 +83,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 82% 12%, rgba(255,255,255,0.16), transparent 24%),
-    linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.09) 100%);
+  background: linear-gradient(120deg, transparent 0%, rgba(19, 99, 223, 0.03) 100%);
   pointer-events: none;
 }
 
@@ -216,7 +215,7 @@ a {
 }
 
 .hero-text .eyebrow {
-  color: #fff !important;
+  color: var(--text) !important;
 }
 
 .hero h1 {
@@ -228,7 +227,7 @@ a {
 
 .lead {
   font-size: 1.04rem;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--muted);
   max-width: 650px;
   margin: 0;
 }
@@ -315,9 +314,9 @@ a {
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.25);
-  color: white;
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
 }
 
 .btn-outline {
@@ -342,8 +341,9 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #f4f8ff;
+  border: 1px solid var(--border);
+  color: var(--text);
   padding: 0.6rem 0.8rem;
   border-radius: 999px;
   font-size: 0.95rem;
