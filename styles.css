@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 20px;
+  scroll-padding-top: 92px;
 }
 
 #inicio,
@@ -29,7 +29,7 @@ html {
 #ubicacion,
 #informacion,
 #contacto {
-  scroll-margin-top: 20px;
+  scroll-margin-top: 92px;
 }
 
 body {
@@ -560,7 +560,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 700;
-  color: #111111;
+  color: var(--gold);
 }
 
 .highlight-card strong {
