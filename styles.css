@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 40px;
+  scroll-padding-top: 70px;
 }
 
 #inicio,
@@ -29,7 +29,7 @@ html {
 #ubicacion,
 #informacion,
 #contacto {
-  scroll-margin-top: 40px;
+  scroll-margin-top: 70px;
 }
 
 body {
