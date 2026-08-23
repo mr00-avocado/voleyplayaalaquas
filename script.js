@@ -21,7 +21,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
     event.preventDefault();
     const header = document.querySelector('.nav');
-    const offset = (header ? header.offsetHeight : 76) + 20;
+      const offset = header ? header.offsetHeight : 76;
     const targetTop = target.getBoundingClientRect().top + window.scrollY - offset;
 
     window.scrollTo({ top: targetTop, behavior: 'smooth' });
